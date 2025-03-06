@@ -1,5 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Big+Shoulders+Stencil+Text:wght@100..900&family=Big+Shoulders+Text:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Big+Shoulders+Stencil+Text:wght@100..900&family=Lexend+Deca:wght@100..900&family=Big+Shoulders+Text:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .body {
+    @apply bg-[#191919] text-primary text-base font-normal font-grotesk;
+  }
+
+  .inner {
+    @apply max-w-[1340px] w-full mx-auto px-[30px];
+  }
+
+  .hover-opacity {
+    @apply transition-opacity duration-300 ease-in-out hover:opacity-60;
+  }
+
+  /* Header */
+  .open.burger::after {
+    opacity: 0;
+  }
+  .burger-lines {
+    @apply block w-[21px] h-[2px] bg-primary rounded-full transition-all duration-300 ease-in-out;
+  }
+
+  .burger-lines.small {
+    @apply block w-[13px];
+  }
+
+  .open .burger-lines.small {
+    opacity: 0;
+  }
+
+  .open .burger-lines:nth-child(1) {
+    @apply rotate-45 translate-y-[8px];
+  }
+
+  .open .burger-lines:nth-child(3) {
+    @apply -rotate-45 translate-y-[-8px];
+  }
+  /* END - Header */
+
+  /* Banner */
+  .swiper-image::after {
+    @apply content-[''] absolute bottom-0 left-0 w-full h-1/2 bg-gradient_black z-10;
+  }
+
+  .swiper-title {
+    @apply text-[120px] mb-[6px] text-white font-bs_stencil font-bold;
+  }
+
+  .swiper-btn {
+    @apply w-[148px];
+  }
+
+  .swiper-btn a {
+    @apply relative block px-2 pt-[12px] pb-[11px] border border-primary rounded-[8px] skew-x-[-23deg] text-white text-center transition-all duration-300 overflow-hidden;
+  }
+
+  .swiper-btn a:hover {
+    @apply bg-primary;
+  }
+
+  .swiper-btn a span {
+    @apply relative inline-block skew-x-[23deg] z-10 transition-all duration-300 ease-in;
+  }
+
+  .swiper-btn a:hover span {
+    @apply text-second;
+  }
+
+  .swiper .swiper-pagination {
+    @apply bottom-[48px] left-[41px] w-auto;
+  }
+
+  .swiper .swiper-pagination-bullet {
+    @apply inline-block align-middle w-[12px] h-[12px] border border-primary rounded-full bg-transparent opacity-100;
+  }
+
+  .swiper .swiper-pagination-bullet {
+    @apply mx-[6px] !important;
+  }
+
+  .swiper .swiper-pagination-bullet-active {
+    @apply relative w-[16px] h-[16px];
+  }
+
+  .swiper .swiper-pagination-bullet-active::before {
+    @apply content-[''] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-[calc(100%-2px)] h-[calc(100%-2px)] bg-primary rounded-full;
+  }
+
+  .banner-message dl::before {
+    @apply content-[''] bg-[url('./assest/images/index/banner-box-before.png')] bg-center bg-cover absolute top-[-120px] left-[0] w-[250px] h-[250px] -z-1;
+  }
+
+  .banner-message dl::after {
+    @apply content-[''] bg-[url('./assest/images/index/banner-box-after.png')] bg-center bg-cover absolute top-[-60px] right-[-48px] w-[320px] h-[320px] -z-1;
+  }
+
+  /* End - Banner */
+}
