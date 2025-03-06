@@ -11,5 +11,13 @@
   "description": "",
   "devDependencies": {
     "tailwindcss": "^3.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuongTheSon/opendev-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LuongTheSon/opendev-test/issues"
+  },
+  "homepage": "https://github.com/LuongTheSon/opendev-test#readme"
 }

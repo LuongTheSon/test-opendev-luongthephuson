@@ -17,6 +17,18 @@
     @apply transition-opacity duration-300 ease-in-out hover:opacity-60;
   }
 
+  .sp {
+    @apply hidden lg:inline
+  }
+
+  .ttl {
+    @apply text-primary text-title font-bs_text font-bold leading-normal leading-tight
+  }
+
+  .subHead {
+    @apply text-primary text-base font-normal leading-tight
+  }
+
   /* Header */
   .open.burger::after {
     opacity: 0;
@@ -100,4 +112,32 @@
   }
 
   /* End - Banner */
+
+  .step li + li {
+    @apply mt-[96px]
+  }
+
+  .step .label {
+    @apply flex flex-row items-end mb-[10px]
+  }
+
+  .step .number {
+    @apply relative inline-block w-[76px] mr-[20px] text-title font-bold text-skyBright leading-none text-center align-bottom
+  }
+  
+  .step .number::before {
+    @apply content-[''] absolute top-1/2 left-1/2 w-full  h-[50px] translate-x-[-55%] translate-y-[-50%] bg-[rgba(41,41,41,0.5)] skew-x-[-23deg] rounded-[8px] -z-1
+  }
+
+  .step .name {
+    @apply relative w-full text-subHeading font-bold leading-normal py-[20px] px-[30px]
+  }
+
+  .step .name::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-second skew-x-[-23deg] rounded-[8px] -z-1
+  }
+
+  .step .sub {
+    @apply ml-[90px] lg:w-[420px] leading-normal
+  }
 }
