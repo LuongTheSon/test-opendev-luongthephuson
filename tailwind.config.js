@@ -2,13 +2,15 @@
 module.exports = {
   content: ['./*.{html,js}'],
   theme: {
-    screens: {
-      sm: '376px', // ip 6,7,8
-      md: '415px', // ip xr
-      lg: '769px', // ipad
-      xl: '1513px' // desktop
-    },
     extend: {
+      screens: {
+        'ssm': '414px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px', 
+        '2xl': '1513px' 
+      },
       fontSize: {
         base: '16px',
         title: '72px',
@@ -24,6 +26,9 @@ module.exports = {
       backgroundImage: {
         gradient_black:
           'linear-gradient(180deg, rgba(25,25,25,0) 0%, rgba(25,25,25,1) 75%)'
+      },
+      backgroundSize: {
+        'full': '100% 100%',
       },
       zIndex: {
         '-1': '-1',

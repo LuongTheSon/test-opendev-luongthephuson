@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      header.classList.add('bg-blackRgb');
+      header.dataset.sticky = "true";
     } else {
-      header.classList.remove('bg-blackRgb');
+      header.dataset.sticky = "false";
     }
   });
 
@@ -34,5 +34,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  swiper();
+  function scrollToTop() {
+    console.log("Clicked! Scrolling to top...");
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  document.getElementById("scrolltotop").addEventListener("click", scrollToTop);
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const listItems = document.querySelectorAll('ul li');
+  const thumbnail = document.querySelector('.our-thumnail img');
+
+  listItems.forEach((li) => {
+    li.addEventListener('click', function () {
+      const newSrc = this.querySelector('img').dataset.src;
+
+      if (newSrc) {
+        thumbnail.src = newSrc;
+      }
+
+      listItems.forEach((item) => item.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
 });
