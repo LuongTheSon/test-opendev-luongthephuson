@@ -236,7 +236,7 @@
   }
 
   .our-list li {
-    @apply relative w-full h-[64px] skew-x-[-23deg] mb-[12px] bg-primary font-bs_text text-2xl md:text-label text-second rounded-[8px_18px_8px_18px] cursor-pointer overflow-hidden transition-all duration-200 ease-in-out;
+    @apply relative w-full h-[64px] skew-x-[-23deg] mb-[12px] bg-primary font-bs_text text-2xl md:text-label lg:text-2xl xl:text-label text-second rounded-[8px_18px_8px_18px] cursor-pointer overflow-hidden;
   }
 
   .our-list li:hover {
