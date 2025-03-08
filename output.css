@@ -2308,14 +2308,14 @@ html, body{
     justify-content: space-between;
   }
 
-  .md\:py-\[80px\]{
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
   .md\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .md\:py-\[80px\]{
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .md\:pb-0{
