@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/LuongTheSon/opendev-test/issues"
   },
-  "homepage": "https://github.com/LuongTheSon/opendev-test#readme"
+  "homepage": "https://github.com/LuongTheSon/opendev-test#readme",
+  "dependencies": {
+    "swiper": "^11.2.5"
+  }
 }
