@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   aos();
+  loadpage();
   hamburgerMenu();
   stickyHeader();
   swiper();
@@ -11,6 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 function aos() {
   if (window.AOS) {
     AOS.init({ duration: 1000, once: true });
+  }
+}
+
+// Load Page
+function loadpage() {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
   }
 }
 
